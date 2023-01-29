@@ -1,6 +1,8 @@
 # 概要
 標準入力に対応したコーディングテスト用の環境の構築
 
+Vscodeの拡張機能で、`PHP Debug`をインストールする必要がある
+
 ## コマンドライン
 ```sh
 docker exec web php 標準入力値を入力
@@ -11,8 +13,9 @@ docker exec web php 標準入力値を入力
 `自分なりに理解した内容のメモ(間違っている部分もかなりあるので、あまり参考にならないです)`
 
 - `${workspaceRoot}`は、ルートディレクトリを意味している。今回の場合だと、docker-compose.ymlがあるファイルがルートディレクトリとなる
-- 今回のdockerで作成した仮想環境は、`var/www/html`のディレクトリー内に、`index.php`のファイルのみが格納されている。デバッグするファイルの対象をしてする必要がある為、`pathMappings` のpathに`${workspaceRoot}/src`と追記する必要がある
-- launch.愛用で立ち上げた仮想環境がlaunch.jsonで指定したportで繋がる
+- 今回のdockerで作成した仮想環境は、`var/www/html`のディレクトリー内に、`index.php`のファイルのみが格納されている。デバッグするファイルを指定する必要がある為、`pathMappings` のpathに`${workspaceRoot}/src`と追記する必要がある
+- `Xdebug v3`の場合は、portを9003番に設定する必要がある。`Xdebug v2`の場合は、9000番のportを使用する
+- `PHP Debug`をインストールした事で、launch.jsonの設定を行えば、Visual Studio CodeがDockerコンテナに接続してくれる
 
 ```json
 "pathMappings": {
