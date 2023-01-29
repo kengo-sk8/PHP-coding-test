@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    working_dir: /var/www/html
+    container_name: web
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:80
+    volumes:
+      - ./src:/var/www/html/
+      - ./conf/:/usr/local/etc/php/conf.d/
