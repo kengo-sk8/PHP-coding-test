@@ -7,8 +7,9 @@ docker exec web php 標準入力値を入力
 # 例 docker exec web php test1 test2 test3
 ```
 
-# 自分なりの理解した内容(間違っている部分もかなりある)
-## launch.jsonに書かれているpathMappingsのディレクトリーの位置について
+## launch.jsonのpathMappingsについて理解した内容
+`自分なりに理解した内容のメモ(間違っている部分もかなりあるので、あまり参考にならないです)`
+
 - `${workspaceRoot}`は、ルートディレクトリを意味している。今回の場合だと、docker-compose.ymlがあるファイルがルートディレクトリとなる
 - 今回のdockerで作成した仮想環境は、`var/www/html`のディレクトリー内に、`index.php`のファイルのみが格納されている。デバッグするファイルの対象をしてする必要がある為、`pathMappings` のpathに`${workspaceRoot}/src`と追記する必要がある
 - launch.愛用で立ち上げた仮想環境がlaunch.jsonで指定したportで繋がる
