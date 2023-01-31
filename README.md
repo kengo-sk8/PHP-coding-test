@@ -5,8 +5,10 @@ Vscodeの拡張機能で、`PHP Debug`をインストールする必要がある
 
 ## コマンドライン
 ```sh
-docker exec web php 標準入力値を入力
-# 例 docker exec web php test1 test2 test3
+docker exec web php ファイルpath&ファイル名 標準入力値を入力
+
+# 例 docker exec web php index.php test1 test2 test3
+# 今回の環境では、例の方法で入力できる
 ```
 
 ## launch.jsonのpathMappingsについて理解した内容
@@ -32,6 +34,7 @@ docker exec web php 標準入力値を入力
 - [Compose sample application](https://github.com/docker/awesome-compose/tree/master/apache-php)
 - [Xdebug3系の設定例](https://blog.junpeko.com/xdebug-3-setting)
 - [[公式]コンテナからホスト上のサービスに対して接続したい](https://docs.docker.jp/v19.03/docker-for-mac/networking.html#mac-i-want-to-connect-from-a-container-to-a-service-on-the-host)
+- [Xdebug3系の設定例](https://blog.junpeko.com/xdebug-3-setting)
 
 ## コマンドライン関連
 - [コマンドラインオプション](https://www.php.net/manual/ja/features.commandline.options.php)

@@ -11,4 +11,4 @@ foreach ($argv as $key => $v) {
 
 }
 
-
+var_dump($array);
