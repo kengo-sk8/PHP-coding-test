@@ -29,6 +29,7 @@ docker exec web php ファイルpath&ファイル名 標準入力値を入力
 # 参考資料
 ## 環境構築関連
 - [Xdebug徹底解説！環境ごとの設定方法から仕組みまでどこよりも詳しく解説します](https://www.membersedge.co.jp/blog/php-xdebug/)
+- [Xdebug+Ubuntu+Docker+PHP-FPM+VSCodeでステップデバッグしたい](Xdebug+Ubuntu+Docker+PHP-FPM+VSCodeでステップデバッグしたい)
 - [【Xdebug】Docker+PHP+VSCodeでデバッグする方法](https://ichi-station.com/php-xdebug-vscode-docker/)
 - [VSCode + Docker + XdebugでPHPのデバッグ環境を構築](https://kitigai.hatenablog.com/entry/2019/05/04/165522)
 - [Compose sample application](https://github.com/docker/awesome-compose/tree/master/apache-php)
